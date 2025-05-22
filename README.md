@@ -1,3 +1,26 @@
+**Observações e conclusão**
+
+- Analisando os dados e os graficos eu considerei incluir a coluna region como dado de entrada, pensando que me cada região pode haver diferenças culturais, alimentares e climáticas... Podendo interfir no valor ao contratar o convênio médico.
+
+- A partir disso, testei diferentes modelos e combinações de variáveis. Os melhores desempenhos foram da Regressão Polinomial e do Random Forest, usando o conjunto: age, bmi, smoker, children, region.
+
+- Voltei ao início do notebook e, ao analisar o histograma de charges, percebi que a maioria dos custos está concentrada entre R 5mileR  15 mil. A partir desse ponto, a frequência dos valores diminui, mas os valores continuam aumentando, chegando a ultrapassar R$ 60 mil. Esses valores mais altos parecem estar relacionados a casos específicos, como pessoas com idade mais avançada (age), com filhos (children) e com IMC elevado (bmi).
+
+**Testando os graficos de dispersão**
+
+- Quando testei a regressão linear (por desencargo de consciência), ficou claro no gráfico que, à medida que o custo aumenta, os pontos começam a se espalhar mais. Eles não ficam exatamente longe da linha, mas parece que o modelo está tentando “fingir que tá certo” — como se dissesse: “tá tudo mais ou menos”, mas na verdade está errando nos extremos.
+
+- Já no gráfico do Random Forest, senti uma certa “bagunça visual” muitos pontos verdes aglomerados na mesma faixa horizontal de custo, o que indica que o modelo deu a mesma previsão para casos diferentes. Além disso, há pontos espalhados que não acompanham tão bem a linha parece que algumas previsões foram meio “jogadas”, sem muita sensibilidade ao caso específico.
+
+- Agora, olhando o gráfico da Regressão Polinomial, é visível que o modelo acompanha melhor a linha ideal. Os pontos estão mais bem distribuídos, “se esforçando” para ficar próximos da diagonal. Há sim alguns pontos afastados, como em qualquer modelo, mas em menor quantidade e com melhor alinhamento geral.
+
+**Conclusão**
+
+- Entendi que, para um dataset onde existem casos extremos causados por combinações específicas de fatores, os modelos como Regressão Linear e até o Random Forest não lidam tão bem. Eles acabam subestimando os valores altos ou superestimando os baixos, tentando equilibrar tudo e com isso, não capturam bem os picos reais.
+
+- A Regressão Polinomial, por outro lado, consegue acompanhar a curva de crescimento e representar melhor a progressão dos custos nesses casos, mostrando um comportamento mais fiel e previsões mais coerentes.
+
+
 **Análise - Melhores resultados**
 
 Regressão Linear: R²: 0.7836 / MAE: 4181.19 / Colunas: age, bmi, smoker, children, region, sex
