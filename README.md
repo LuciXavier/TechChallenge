@@ -18,18 +18,18 @@ Random Forest R²: 0.8683 / MAE: 2470.50 / Colunas: age, bmi, smoker, children, 
 
 🔹 Regressão Linear: R²: 0.7776932310583374 MAE: 4260.560091099392
 
--X = df[['age', 'bmi', 'smoker', 'children']]
--y = df['charges']
+- X = df[['age', 'bmi', 'smoker', 'children']]
+- y = df['charges']
 
 🔹 Regressão Linear: R²: 0.7811147722517886 MAE: 4213.798594527246
 
--X = df[['age', 'bmi', 'smoker', 'children', 'region_northeast', 'region_northwest', 'region_southeast', 'region_southwest']]
--y = df['charges']
+- X = df[['age', 'bmi', 'smoker', 'children', 'region_northeast', 'region_northwest', 'region_southeast', 'region_southwest']]
+- y = df['charges']
 
 🔹 Regressão Linear: R²: 0.7835569786290856 MAE: 4182.011828516012
 
--X = df[['age', 'bmi', 'smoker', 'children', 'region_northeast', 'region_northwest', 'region_southeast', 'region_southwest', 'sex']]
--y = df['charges']
+- X = df[['age', 'bmi', 'smoker', 'children', 'region_northeast', 'region_northwest', 'region_southeast', 'region_southwest', 'sex']]
+- y = df['charges']
 
 🔹 Regressão Linear: R²: 0.7835929767120724 MAE: 4181.194473753638
 
